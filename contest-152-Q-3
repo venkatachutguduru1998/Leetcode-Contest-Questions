@@ -1,0 +1,30 @@
+class Solution(object):
+    def longestCommonPrefix(self, words, k):
+        from collections import Counter
+        """
+        :type words: List[str]
+        :type k: int
+        :rtype: List[int]
+        """
+        temp_arr=[]
+        long_arr=[]
+        for i in range(len(words)):
+            temp_arr = words[0:i]+words[i+1:]
+            if len(temp_arr)==0:
+                return [0]
+            freq_word= Counter(temp_arr)
+            #print(freq_word)
+            if max(freq_word.values())>=k:
+                long_arr.append(len(max(freq_word,key=freq_word.get)))
+            else:
+                long_arr.append(0)
+                #long_arr.append(max(freq_word,freq_word.get))
+        
+        return long_arr
+        
+
+
+
+
+        
+        
