@@ -1,0 +1,32 @@
+LeetCode Questions- Even number 3 digit combination  of digits in an array. 
+
+3 digit combination of array
+
+class Solution(object):
+    def totalNumbers(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: int
+        """
+        even_count=0
+        from itertools import permutations
+        iterlist=list(permutations(digits,3))
+        set_comb=set(iterlist)
+        #print (set_comb)
+        for innertuple in set_comb:
+            if innertuple[0]!=0 and innertuple[2]%2==0:
+                #print(innertuple)
+                even_count+=1
+
+        return even_count
+
+        
+
+
+        
+        
+        
+
+
+
+        
