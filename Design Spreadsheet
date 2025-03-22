@@ -1,4 +1,4 @@
-class Spreadsheet(object): --> Spreadsheet letters
+class Spreadsheet(object): --> Spreadsheet letters - leetcode context biweekly 152
     
     def __init__(self, rows):
         """
